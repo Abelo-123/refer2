@@ -19,11 +19,11 @@ const YourComponent = () => {
       // Function to close the current Mini App and redirect to another one
       const redirectToAnotherMiniApp = () => {
         // Close the current Mini App
-        Telegram.WebApp.close();
 
+        window.open("https://t.me/PaxyoMini_bot?startapp");
         // Open the new Mini App (user has to click it)
         setTimeout(() => {
-          window.open("https://t.me/PaxyoMini_bot?startapp");
+          Telegram.WebApp.close();
         }, 100);
       };
 
