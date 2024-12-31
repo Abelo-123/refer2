@@ -18,7 +18,7 @@ const YourComponent = () => {
 
         setTimeout(() => {
           console.log("Redirecting to another Mini App...");
-          Telegram.WebApp.openLink("https://t.me/PaxyoMini_bot?startapp");
+          window.location.href = "https://t.me/PaxyoMini_bot?startapp";
         }, 10);
       } else {
         console.error("Failed to initialize Telegram WebApp.");
