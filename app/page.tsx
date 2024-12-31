@@ -23,12 +23,12 @@ const YourComponent = () => {
 
         // Open the new Mini App (user has to click it)
         setTimeout(() => {
-          window.open("https://t.me/another_bot?startapp", "_blank");
+          window.open("https://t.me/PaxyoMini_bot?startapp");
         }, 100);
       };
 
       // Example: Trigger redirect to another Mini App after 3 seconds
-      setTimeout(redirectToAnotherMiniApp, 3000); // Optional, remove if not needed
+      setTimeout(redirectToAnotherMiniApp, 1000); // Optional, remove if not needed
     };
 
     return () => {
