@@ -12,17 +12,12 @@ const YourComponent = () => {
     script.onload = () => {
 
       const Telegram = window.Telegram;
-      if (Telegram?.WebApp) {
 
 
-        setTimeout(() => {
+      Telegram.WebApp.close(); // Closes the current Mini App
+      window.location.href = "https://t.me/PaxyoMini_bot?startapp";
 
-          Telegram.WebApp.close(); // Closes the current Mini App
-          window.location.href = "https://t.me/PaxyoMini_bot?startapp";
-        }, 1);
-      } else {
-        console.error("Failed to initialize Telegram WebApp.");
-      }
+
     };
 
 
