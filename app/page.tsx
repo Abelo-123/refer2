@@ -13,7 +13,7 @@ const YourComponent = () => {
 
       const Telegram = window.Telegram;
       if (Telegram?.WebApp) {
-        Telegram.WebApp.ready();
+
 
         setTimeout(() => {
 
