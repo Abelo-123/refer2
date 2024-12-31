@@ -8,8 +8,9 @@ const YourComponent = () => {
 
 
     WebApp.close(); // Closes the current Mini App
-    window.location.href = "https://t.me/PaxyoMini_bot?startapp";
-
+    if (typeof window !== "undefined") {
+      window.location.href = "https://t.me/PaxyoMini_bot?startapp";
+    }
   }, []);
 
   return (
