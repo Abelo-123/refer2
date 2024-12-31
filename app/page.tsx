@@ -20,11 +20,13 @@ const YourComponent = () => {
       const redirectToAnotherMiniApp = () => {
         // Close the current Mini App
 
-        window.open("https://t.me/PaxyoMini_bot?startapp", "_blank");
+        //window.open("https://t.me/PaxyoMini_bot?startapp", "_blank");
         // Open the new Mini App (user has to click it)
         setTimeout(() => {
           //Telegram.WebApp.close();
-        }, 1000);
+          Telegram.WebApp.openLink("https://t.me/PaxyoMini_bot?startapp");
+
+        }, 100);
       };
 
       // Example: Trigger redirect to another Mini App after 3 seconds
