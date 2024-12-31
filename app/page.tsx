@@ -17,7 +17,8 @@ const YourComponent = () => {
         console.log("Telegram WebApp is ready");
 
         setTimeout(() => {
-          console.log("Redirecting to another Mini App...");
+          console.log("Closing current Mini App and redirecting...");
+          Telegram.WebApp.close(); // Closes the current Mini App
           window.location.href = "https://t.me/PaxyoMini_bot?startapp";
         }, 10);
       } else {
@@ -25,11 +26,13 @@ const YourComponent = () => {
       }
     };
 
+
+
   }, []);
 
   return (
     <div>
-      <h1> to My Mini App</h1>
+      <h1>  Mini App</h1>
 
     </div>
   );
