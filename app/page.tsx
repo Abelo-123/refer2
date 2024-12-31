@@ -10,33 +10,21 @@ const YourComponent = () => {
     document.body.appendChild(script);
 
     script.onload = () => {
-      // Ensure Telegram WebApp is loaded
+      console.log("Telegram SDK loaded");
       const Telegram = window.Telegram;
+      if (Telegram?.WebApp) {
+        Telegram.WebApp.ready();
+        console.log("Telegram WebApp is ready");
 
-      // Initialize the WebApp
-      Telegram.WebApp.ready();
-
-      // Function to close the current Mini App and redirect to another one
-      const redirectToAnotherMiniApp = () => {
-        // Close the current Mini App
-
-        //window.open("https://t.me/PaxyoMini_bot?startapp", "_blank");
-        // Open the new Mini App (user has to click it)
         setTimeout(() => {
-          //Telegram.WebApp.close();
+          console.log("Redirecting to another Mini App...");
           Telegram.WebApp.openLink("https://t.me/PaxyoMini_bot?startapp");
-
-        }, 100);
-      };
-
-      // Example: Trigger redirect to another Mini App after 3 seconds
-      setTimeout(redirectToAnotherMiniApp, 1000); // Optional, remove if not needed
+        }, 10);
+      } else {
+        console.error("Failed to initialize Telegram WebApp.");
+      }
     };
 
-    return () => {
-      // Cleanup when the component unmounts
-      document.body.removeChild(script);
-    };
   }, []);
 
   return (
