@@ -7,7 +7,7 @@ const YourComponent = () => {
     // Ensure code runs only on the client side
     if (typeof window !== "undefined") {
       // Redirect to another Telegram Mini App
-      WebApp.openLink("https://t.me/PaxyoMini_bot?startapp=miniapp");
+      WebApp.openTelegramLink("https://t.me/PaxyoMini_bot?startapp=miniapp");
 
       // Close the current Mini App after redirection is triggered
       setTimeout(() => {
